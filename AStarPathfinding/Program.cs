@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            Grid grid = new Grid(10, 4.5f);
+            Grid grid = new Grid(10, 45);
+            grid.GenerateGrid();
             Graphics.DrawGrid(grid);
         }
     }

@@ -1,12 +1,10 @@
-﻿using System.Drawing;
-
-namespace AStarPathfinding
+﻿namespace AStarPathfinding
 {
     public class Tile
     {
         public int X { get; private set; }
         public int Y { get; private set; }
-        public int FCost { get; set; }
+        public int FCost { get { return GCost + HCost; } }
         public int GCost { get; set; }
         public int HCost { get; set; }
         public List<Tile> Neighbours { get; set; } 
