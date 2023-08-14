@@ -21,7 +21,7 @@
 
         public void SetStartAndEnd(Tile start, Tile end)
         {
-            if (CheckIfTheSame(start, end))
+            if (CheckIfTheSameCoords(start, end))
                 return;
 
             start.TileType = Tile.TypeOfTile.Start;
@@ -40,11 +40,11 @@
                 {
                     Tile tile = new Tile(i, j);
 
-                    if (CheckIfTheSame(tile, StartTile))
+                    if (CheckIfTheSameCoords(tile, StartTile))
                     {
                         tile.TileType = Tile.TypeOfTile.Start;
                     }
-                    else if(CheckIfTheSame(tile, EndTile))
+                    else if(CheckIfTheSameCoords(tile, EndTile))
                     {
                         tile.TileType = Tile.TypeOfTile.End;
                     }
@@ -104,12 +104,12 @@
             }
         }
 
-        private bool CheckIfTheSame(Tile tileA, Tile tileB)
+        public bool CheckIfTheSameCoords(Tile tileA, Tile tileB)
         {
             if(tileA.X == tileB.X && tileA.Y == tileB.Y)
             {
                 return true;
-            }
+            } 
             return false;
         }
     }

@@ -4,9 +4,13 @@
     {
         static void Main(string[] args)
         {
-            Grid grid = new Grid(10, 45);
+            Grid grid = new Grid(10, 40);
             grid.GenerateGrid();
-            Graphics.DrawGrid(grid);
+
+            IGraphics graphics = new Graphics(grid);
+            graphics.DrawGrid();
+
+            
         }
     }
 }
