@@ -10,7 +10,8 @@
             IGraphics graphics = new Graphics(grid);
             graphics.DrawGrid();
 
-            
+            Algorithm algorithm = new Algorithm(grid);
+            graphics.VisualizePath(algorithm.ShortestPath);
         }
     }
 }
